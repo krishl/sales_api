@@ -9,4 +9,4 @@ class Customer(models.Model):
 
     def __str__(self):
         """Return a human readable representation of the model instance."""
-        return "%s the place" % self.first_name
+        return "%s" % self.first_name
