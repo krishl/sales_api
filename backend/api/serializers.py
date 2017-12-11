@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Customer
+from .models import Customer, Product
 
 class CustomerSerializer(serializers.ModelSerializer):
     """Serializer to map the Model instance into JSON format."""
@@ -8,3 +8,11 @@ class CustomerSerializer(serializers.ModelSerializer):
         """Meta class to map serializer's fields with the model fields."""
         model = Customer
         fields = ('id', 'first_name', 'last_initial')
+
+class ProductSerializer(serializers.ModelSerializer):
+    """Serializer to map the Model instance into JSON format."""
+
+    class Meta:
+        """Meta class to map serializer's fields with the model fields."""
+        model = Product
+        fields = ('id', 'name', 'description')
