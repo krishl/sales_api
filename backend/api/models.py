@@ -14,7 +14,7 @@ class Customer(models.Model):
 class Product(models.Model):
     """This class represents the product model."""
     name = models.CharField(max_length=255, blank=False, unique=False)
-    description = models.CharField(max_length=1000, blank=False, unique=True)
+    description = models.CharField(max_length=255, blank=False, unique=True)
 
     def __str__(self):
         """Return a human readable representation of the model instance."""
