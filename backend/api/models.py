@@ -8,16 +8,16 @@ class Customer(models.Model):
     last_initial = models.CharField(max_length=1, blank=False, unique=False, validators=[letters])
 
     def __str__(self):
-        """Return a human readable representation of the model instance."""
+        """Return a human readable representation of the customer instance."""
         return self.first_name
 
 class Product(models.Model):
     """This class represents the product model."""
     name = models.CharField(max_length=255, blank=False, unique=False)
-    description = models.CharField(max_length=255, blank=False, unique=True)
+    description = models.CharField(max_length=255, blank=False, unique=False)
 
     def __str__(self):
-        """Return a human readable representation of the model instance."""
+        """Return a human readable representation of the product instance."""
         return self.name
 
 class Cart(models.Model):
@@ -26,5 +26,5 @@ class Cart(models.Model):
     products = models.ManyToManyField(Product)
 
     def __str__(self):
-        """Return a human readable representation of the model instance."""
+        """Return a human readable representation of the cart instance."""
         return self.customer

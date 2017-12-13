@@ -26,3 +26,8 @@ class CustomerSerializer(serializers.ModelSerializer):
         """Meta class to map serializer's fields with the model fields."""
         model = Customer
         fields = ('id', 'first_name', 'last_initial', 'cart')
+
+    def create(self, validated_data):
+        customer = Customer.objects.create(**validated_data)
+        Cart.objects.create(customer=customer)
+        return customer
