@@ -18,4 +18,4 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver
 ```
-3. Navigate to the resulting URL on your preferred internet browser.
+3. The front-end client is available at https://github.com/krishl/sales-front
