@@ -28,3 +28,4 @@ class Cart(models.Model):
     def __str__(self):
         """Return a human readable representation of the cart instance."""
         return self.customer
+    

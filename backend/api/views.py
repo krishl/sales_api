@@ -13,7 +13,7 @@ class CreateCustomerView(generics.ListCreateAPIView):
         serializer.save()
 
 class CustomerDetailsView(generics.RetrieveUpdateDestroyAPIView):
-    """This class handles the http GET, PUT and DELETE requests."""
+    """This class handles the http GET, PUT, PATCH, and DELETE requests."""
 
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
@@ -23,12 +23,12 @@ class CreateProductView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-    def perform_customer_create(self, serializer):
-        """Save the post data when creating a new customer."""
+    def perform_product_create(self, serializer):
+        """Save the post data when creating a new product."""
         serializer.save()
 
 class ProductDetailsView(generics.RetrieveUpdateDestroyAPIView):
-    """This class handles the http GET, PUT and DELETE requests."""
+    """This class handles the http GET, PUT, PATCH, and DELETE requests."""
 
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -38,18 +38,18 @@ class CreateCartView(generics.ListCreateAPIView):
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
 
-    def perform_customer_create(self, serializer):
-        """Save the post data when creating a new customer."""
+    def perform_cart_create(self, serializer):
+        """Save the post data when creating a new cart."""
         serializer.save()
 
 class CartDetailsView(generics.RetrieveUpdateDestroyAPIView):
-    """This class handles the http GET, PUT and DELETE requests."""
+    """This class handles the http GET, PUT, PATCH, and DELETE requests."""
 
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
 
 class CustomerCartView(generics.ListCreateAPIView):
-    """This class handles the http GET, PUT and DELETE requests."""
+    """This class defines the customer's cart of our rest api."""
     serializer_class = CartSerializer
 
     def get_queryset(self):

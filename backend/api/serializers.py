@@ -18,6 +18,12 @@ class CartSerializer(serializers.ModelSerializer):
         model = Cart
         fields = ('id', 'customer', 'products')
 
+    # def update(self, instance, validated_data):
+    #     product = Product.objects.get(name=validated_data.get('name'))       
+    #     instance.products.add(product)
+    #     instance.save()
+    #     return instance
+
 class CustomerSerializer(serializers.ModelSerializer):
     """Serializer to map the Model instance into JSON format."""
     cart = CartSerializer(many=False, read_only=True)    
