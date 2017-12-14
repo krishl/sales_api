@@ -1,4 +1,4 @@
-# Sales Web Application
+# Sales Web Application: Back-End
 
 This is a REST API built with Django REST Framework.
 
