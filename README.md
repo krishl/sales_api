@@ -13,9 +13,9 @@ pip3 install virtualenv
 cd backend
 virtualenv venv -p python3
 source venv/bin/activate
-pip install -r requirements.txt
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
+pip3 install -r requirements.txt
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
 ```
 3. Navigate to the resulting URL on your preferred internet browser.
