@@ -8,7 +8,7 @@ class CreateCustomerView(generics.ListCreateAPIView):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
 
-    def perform_customer_create(self, serializer):
+    def perform_create(self, serializer):
         """Save the post data when creating a new customer."""
         serializer.save()
 
@@ -23,7 +23,7 @@ class CreateProductView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-    def perform_product_create(self, serializer):
+    def perform_create(self, serializer):
         """Save the post data when creating a new product."""
         serializer.save()
 
@@ -38,7 +38,7 @@ class CreateCartView(generics.ListCreateAPIView):
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
 
-    def perform_cart_create(self, serializer):
+    def perform_create(self, serializer):
         """Save the post data when creating a new cart."""
         serializer.save()
 
