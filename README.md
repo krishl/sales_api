@@ -1,6 +1,6 @@
 # Sales Web Application
 
-This is a REST API build with Django Rest Framework.
+This is a REST API built with Django REST Framework.
 
 Visit this [blog post](http://krishel.com/sales_web_application) for more details.
 
